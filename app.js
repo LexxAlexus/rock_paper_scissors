@@ -16,6 +16,15 @@ let getComputerChoice = function() {
 };
 getComputerChoice();
 
+
+//Player Selection 
+let userSelection = prompt('Choose: rock, paper, scissors');
+
+//Lowercase Selection
+let userResult = userSelection.toLowerCase();
+console.log(userResult);
+
+
 /* let userSelection = prompt('Hello, Choose between rock, paper, scissors?');
 
 function selection(userSelection) {
