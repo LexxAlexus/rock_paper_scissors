@@ -22,7 +22,7 @@ let userSelection = prompt('Choose: rock, paper, scissors');
 let userResult = userSelection.toLowerCase();
 //console.log(userResult);
 
-
+//Function to see who wins
 const gamePLay = function(getComputerChoice, userResult) {
     if(getComputerChoice === userResult) {
         return 'No winner! Same answers';
