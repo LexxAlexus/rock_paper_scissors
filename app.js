@@ -46,6 +46,16 @@ const gamePLay = function(getComputerChoice, userResult) {
 const begin = gamePLay(getComputerChoice(), userResult);
 console.log(begin);
 
+//Scoreboard
+let userPlayerScore = 0;
+let computerScore = 0;
+
+/* const fiveRounds = function() {
+    for(let round = 0; round < 5; round++)
+    console.log(begin);
+};
+*/
+
 
 /* let userSelection = prompt('Hello, Choose between rock, paper, scissors?');
 
