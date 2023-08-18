@@ -13,3 +13,4 @@ let getComputerChoice = function() {
     }
 };
 //console.log(getComputerChoice());
+
