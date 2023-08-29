@@ -3,15 +3,24 @@
 // Global variable of choices to choose from
 const choices = ['rock', 'paper', 'scissors'];
 
+//Empty Array to log the winner inside
+const winners = [];
+
 function game() {
-//play the game
-//play five rounds
+    for(let i = 1; i <= 5; i++){
+        playRound();
+    }
+    logWins();
 }
 
 function playRound() {
     const playerSelection = playerChoice();
     const computerSelection = computerChoice();
+    const winner = checkWinner(playerSelection, computerSelection);
+    //Using push method to push winner inside the winners array
+    winners.push(winner);
 }
+
 
 function playerChoice() {
     let input = prompt('Welcome! Please choose rock, paper, scissors');
@@ -47,4 +56,22 @@ function validateInput(userChoice) {
     return choices.includes(userChoice);
 }
 
-console.log(playerChoice());
+//Function to determine a winner
+function checkWinner(choicePlayer, choiceComputer) {
+    if(choicePlayer === choiceComputer) {
+        return 'No Winner! Tie!';
+    } else if(
+    (choicePlayer === 'rock' && choiceComputer === 'scissors') ||
+    (choicePlayer === 'paper' && choiceComputer === 'rock') ||
+    (choicePlayer === 'scissors' && choiceComputer === 'paper')) {
+        return 'Player Wins!';
+    } else {
+        return 'Computer Wins!';
+    }
+} 
+//Function to keep track of wins
+function logWins() {
+    console.log(winners);
+}
+
+console.log(game());
